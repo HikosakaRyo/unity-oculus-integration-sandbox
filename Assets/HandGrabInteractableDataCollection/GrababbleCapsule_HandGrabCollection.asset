@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c252863d3264814b8c34a1c4a2e762d, type: 3}
+  m_Name: GrababbleCapsule_HandGrabCollection
+  m_EditorClassIdentifier: 
+  _interactablesData:
+  - poses:
+    - gripPose:
+        position: {x: 0.028829874, y: -0.02464652, z: -0.12163466}
+        rotation: {x: 0.1843849, y: 0.52367043, z: -0.5981855, w: 0.5778804}
+      handPose:
+        _handedness: 1
+        _fingersFreedom: 0200000002000000010000000100000000000000
+        _jointRotations:
+        - {x: 0.37538695, y: -0.42458394, z: 0.0077790017, w: 0.82386386}
+        - {x: 0.2547137, y: -0.17541905, z: -0.18584903, w: 0.9326351}
+        - {x: -0.08321442, y: 0.06664178, z: -0.042095803, w: 0.993409}
+        - {x: 0.07978251, y: -0.05232525, z: -0.09387783, w: 0.9910009}
+        - {x: 0.032078184, y: 0.037051845, z: 0.096928045, w: 0.99408394}
+        - {x: -0.025823995, y: -0.0033804737, z: -0.38763666, w: 0.92144424}
+        - {x: -0.01699064, y: 0.023352351, z: -0.14591402, w: 0.98887557}
+        - {x: 0.00095005997, y: 0.07661079, z: 0.091142155, w: 0.99288595}
+        - {x: -0.012950325, y: -0.00209365, z: -0.5177752, w: 0.85541606}
+        - {x: -0.06324078, y: -0.00864023, z: -0.21022725, w: 0.9755669}
+        - {x: -0.049422197, y: 0.10713763, z: -0.010137084, w: 0.9929632}
+        - {x: -0.041544333, y: -0.01369367, z: -0.4863185, w: 0.87268597}
+        - {x: -0.016740138, y: -0.029498748, z: -0.26110443, w: 0.9647145}
+        - {x: -0.20703593, y: 0.14034285, z: -0.018311813, w: 0.96804154}
+        - {x: 0.0844802, y: 0.021348573, z: -0.12597011, w: 0.98819983}
+        - {x: -0.072377115, y: 0.021814018, z: -0.42510355, w: 0.9019824}
+        - {x: 0.0014352095, y: -0.04792034, z: -0.2098133, w: 0.9765652}
+      scale: 1.0000002
+    grabType: 3
+    handAlignment: 1
+    scoringModifier:
+      _maxDistance: 0.1
+      _positionRotationWeight: 0.8
+    pinchGrabRules:
+      _thumbRequirement: 2
+      _indexRequirement: 1
+      _middleRequirement: 1
+      _ringRequirement: 0
+      _pinkyRequirement: 0
+      _unselectMode: 0
+    palmGrabRules:
+      _thumbRequirement: 1
+      _indexRequirement: 2
+      _middleRequirement: 2
+      _ringRequirement: 2
+      _pinkyRequirement: 1
+      _unselectMode: 0
+  - poses:
+    - gripPose:
+        position: {x: 0.06349629, y: 0.22500956, z: -0.09447819}
+        rotation: {x: 0.07959388, y: 0.4512137, z: 0.025064105, w: 0.88850594}
+      handPose:
+        _handedness: 1
+        _fingersFreedom: 0200000002000000010000000100000000000000
+        _jointRotations:
+        - {x: 0.37538695, y: -0.42458394, z: 0.0077789947, w: 0.82386386}
+        - {x: 0.27030203, y: -0.17934279, z: -0.26345614, w: 0.90849483}
+        - {x: -0.08277942, y: 0.058794565, z: -0.12987804, w: 0.9863172}
+        - {x: 0.082460545, y: -0.060876906, z: 0.0067597628, w: 0.9947098}
+        - {x: 0.031489227, y: 0.016232202, z: -0.09764903, w: 0.99458987}
+        - {x: -0.025546676, y: -0.0046377666, z: -0.43087325, w: 0.90203863}
+        - {x: -0.017108046, y: 0.022085499, z: -0.20594072, w: 0.97816545}
+        - {x: -0.012625936, y: 0.050697748, z: -0.12918125, w: 0.9902435}
+        - {x: -0.012912553, y: -0.0027539046, z: -0.5647716, w: 0.82514143}
+        - {x: -0.07165829, y: -0.012922324, z: -0.30794796, w: 0.9486125}
+        - {x: -0.06288127, y: 0.08987094, z: -0.1607424, w: 0.98088264}
+        - {x: -0.04155116, y: -0.013730876, z: -0.48737437, w: 0.87209606}
+        - {x: -0.0191795, y: -0.029274203, z: -0.31470641, w: 0.94854397}
+        - {x: -0.20703593, y: 0.1403428, z: -0.018311802, w: 0.9680414}
+        - {x: 0.08032536, y: 0.022633964, z: -0.1964048, w: 0.9769649}
+        - {x: -0.06912633, y: 0.024475168, z: -0.37902266, w: 0.9224773}
+        - {x: 0.0014334308, y: -0.047926396, z: -0.2092801, w: 0.97667944}
+      scale: 1
+    grabType: 3
+    handAlignment: 1
+    scoringModifier:
+      _maxDistance: 0.1
+      _positionRotationWeight: 0.8
+    pinchGrabRules:
+      _thumbRequirement: 2
+      _indexRequirement: 1
+      _middleRequirement: 1
+      _ringRequirement: 0
+      _pinkyRequirement: 0
+      _unselectMode: 0
+    palmGrabRules:
+      _thumbRequirement: 1
+      _indexRequirement: 2
+      _middleRequirement: 2
+      _ringRequirement: 2
+      _pinkyRequirement: 1
+      _unselectMode: 0
