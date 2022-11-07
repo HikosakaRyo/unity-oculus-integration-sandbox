@@ -36,6 +36,10 @@ Unity + Oculus Integrationを使ってコントローラやハンドトラッキ
 - Assets/Sandbox/Poke/Scenes/PokeScene4  
 [その５：Canvas上にボタンを作成](https://rhikos-prgm.hatenablog.com/entry/2022/10/28/172127)
 
+### Unity + Oculus Integrationで仮想手首ボタンの実装
+- Assets/Sandbox/WristUI/Scenes/WristUICanvas
+[Unity + Oculus Integrationで仮想手首ボタンの実装](https://rhikos-prgm.hatenablog.com/entry/2022/11/07/171933)
+
 ## 使い方
 
 本リポジトリのシーンを実行するための手順を説明します。  
