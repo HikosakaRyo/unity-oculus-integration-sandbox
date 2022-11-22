@@ -1,9 +1,13 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Oculus.Interaction;
 using Oculus.Interaction.Input;
 using Oculus.Interaction.HandGrab.Visuals;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 
 /// <summary>
 /// 手首周辺に表示するUI
@@ -38,7 +42,7 @@ public class WristUI : MonoBehaviour
 
     void Start()
     {
-        this._centerEyeAnchor = ovrCameraRigRef.CameraRig.centerEyeAnchor;
+        _centerEyeAnchor = ovrCameraRigRef.CameraRig.centerEyeAnchor;
         _handGhostLeft.gameObject.SetActive(false);
         _handGhostRight.gameObject.SetActive(false);
     }
@@ -104,19 +108,54 @@ public class WristUI : MonoBehaviour
 
 
 #if UNITY_EDITOR
+
+    [MenuItem("GameObject/WristUI")]
+    public static void CreateWristUIObject(MenuCommand menuCommand)
+    {
+        GameObject newObj = new GameObject("WristUI");
+        GameObject anchor = new GameObject("anchor");
+        anchor.transform.parent = newObj.transform;
+        anchor.transform.localPosition = new Vector3(-0.05f, 0.06f, 0);
+        anchor.transform.localRotation = Quaternion.Euler(90, 90, 0);
+
+        var wristUI = newObj.AddComponent<WristUI>();
+        var leftHandPrefab = AssetDatabase.LoadAssetAtPath<HandGhost>(
+            "Assets/Oculus/Interaction/Runtime/Prefabs/HandGrab/Ghost-LeftHand.prefab");
+        var rightHandPrefab = AssetDatabase.LoadAssetAtPath<HandGhost>(
+            "Assets/Oculus/Interaction/Runtime/Prefabs/HandGrab/Ghost-RightHand.prefab");
+        var leftHand = Instantiate(leftHandPrefab, newObj.transform);
+        var rightHand = Instantiate(rightHandPrefab, newObj.transform);
+
+        leftHand.transform.localPosition = new Vector3(0, 0, 0);
+        leftHand.transform.localRotation = Quaternion.Euler(0, 0, 0);
+        rightHand.transform.localPosition = new Vector3(0, 0, 0);
+        rightHand.transform.localRotation = Quaternion.Euler(0, 0, 180);
+
+        wristUI._handGhostLeft = leftHand.GetComponent<HandGhost>();
+        wristUI._handGhostRight = rightHand.GetComponent<HandGhost>();
+        wristUI._anchor = anchor.transform;
+        wristUI.isLeftHand = true;
+
+        wristUI.ovrCameraRigRef = FindObjectOfType<OVRCameraRigRef>();
+
+        GameObjectUtility.SetParentAndAlign(newObj, menuCommand.context as GameObject);
+        Undo.RegisterCreatedObjectUndo(newObj, "WristUI");
+        Selection.activeObject = newObj;
+    }
+
     private void OnValidate()
     {
-        if (UnityEditor.EditorApplication.isPlaying)
+        if (EditorApplication.isPlaying)
         {
             return;
         }
-        UnityEditor.EditorApplication.delayCall += _OnValidate;
+        EditorApplication.delayCall += _OnValidate;
     }
 
     private void _OnValidate()
     {
         // 位置調整用のghostHandの左右切り替え
-        UnityEditor.EditorApplication.delayCall -= _OnValidate;
+        EditorApplication.delayCall -= _OnValidate;
         if (this == null) return;
         if (isLeftHand)
         {
