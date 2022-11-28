@@ -37,7 +37,7 @@ Unity + Oculus Integrationを使ってコントローラやハンドトラッキ
 [その５：Canvas上にボタンを作成](https://rhikos-prgm.hatenablog.com/entry/2022/10/28/172127)
 
 ### Unity + Oculus Integrationで仮想手首ボタンの実装
-- Assets/Sandbox/WristUI/Scenes/WristUICanvas
+- Assets/Sandbox/WristUI/Scenes/WristUICanvas  
 [Unity + Oculus Integrationで仮想手首ボタンの実装](https://rhikos-prgm.hatenablog.com/entry/2022/11/07/171933)
 
 ## 使い方
@@ -47,6 +47,9 @@ Unity + Oculus Integrationを使ってコントローラやハンドトラッキ
 1. ソースコードをクローンする  
 本リポジトリのソースコードをクローンしてください。
 2. Oculus Integrationをインポートする  
+Oculus Integrationを以下からダウンロードしてインポートしてください。  
+https://developer.oculus.com/downloads/package/unity-integration/41.0  
+※v44以降を使用した場合、Scene内の一部オブジェクト間で参照が切れてしまう現象が発生します。  
 [こちら](https://rhikos-prgm.hatenablog.com/entry/2022/10/01/043120)の記事の「Oculus Integrationのインポート」あたりを参考にOculus Integrationをインポートしてください。
 
 
